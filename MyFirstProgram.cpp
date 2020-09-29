@@ -8,19 +8,24 @@ using namespace std;
 
 int main()
 {
-    int numberOne = 10;
-    int numberTwo = 20;
-    int numberThree = 30, numberFour = 40;
-    double numberFive = 45.5;
-    char letter = 'A';
+    int num = 25;
+    int* ptrNum = &num;
 
-    const float PI = 3.14159F;
+    cout << *ptrNum << endl;
+    cout << &num << endl;
+    cout << ptrNum << endl;
+    cout << &ptrNum << endl;
 
-    cout << "Hello World!\n";
+    //Pointer array
+    int familySize[4] = { 6,3,4,5 };
+    cout << familySize << endl;
 
-    cout << numberOne << endl;
-    cout << numberOne << " " << numberTwo << " " << numberThree << " " << numberFour << " " << 
-        numberFive << " " << letter << " " << PI << endl;
+    int* ptrArray = familySize;
+    cout << ptrArray << endl;
+
+    for (int i = 0; i < 4; i++) {
+        cout << familySize[i] << endl;
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
